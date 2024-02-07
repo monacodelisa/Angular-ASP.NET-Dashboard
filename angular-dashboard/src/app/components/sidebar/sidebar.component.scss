@@ -1,6 +1,17 @@
-:host {
+.sidebar {
   background: #292929;
   display: flex;
   width: 10vw;
   height: 100vh;
+  margin-left: -10rem;
+
+  &.open {
+    transform: translateX(10rem);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.closed {
+    transform: translateX(-10rem);
+    transition: all 0.3s ease-in-out;
+  }
 }
