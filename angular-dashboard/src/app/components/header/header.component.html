@@ -1,18 +1,11 @@
 <div class="card">
   <p-toolbar>
     <div class="p-toolbar-group-start">
-      <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
+      <p-button (click)="toggleSidenav()" icon="pi pi-bars"></p-button>
     </div>
     <div class="p-toolbar-group-end">
       <p-inputSwitch [(ngModel)]="darkMode"></p-inputSwitch>
     </div>
   </p-toolbar>
 </div>
-
-<p-sidebar [(visible)]="sidebarVisible" styleClass="w-30rem">
-  <h3>Sidebar</h3>
-  <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
-</p-sidebar>
+<app-sidebar [sidebarVisible]="sidebarVisible"></app-sidebar>

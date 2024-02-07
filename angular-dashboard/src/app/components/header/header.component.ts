@@ -8,7 +8,7 @@ import { MenuItem } from "primeng/api";
 })
 export class HeaderComponent implements OnInit {
   darkMode: boolean = true;
-  sidebarVisible: boolean = false;
+  sidebarVisible: boolean = true;
 
 	items: MenuItem[] | undefined;
 
@@ -34,4 +34,8 @@ export class HeaderComponent implements OnInit {
 			},
 		];
 	}
+
+  toggleSidenav() {
+    this.sidebarVisible = !this.sidebarVisible;
+  }
 }
