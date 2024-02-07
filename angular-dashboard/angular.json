@@ -30,7 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "primeng/resources/themes/mdc-dark-deeppurple/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -93,12 +95,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "primeng/resources/themes/mdc-dark-deeppurple/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7a192039-db04-4e1a-9258-0e94665d3636"
   }
 }
