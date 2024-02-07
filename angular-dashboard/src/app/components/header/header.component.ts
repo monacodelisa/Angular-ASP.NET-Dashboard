@@ -7,6 +7,9 @@ import { MenuItem } from "primeng/api";
 	styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
+  darkMode: boolean = true;
+  sidebarVisible: boolean = false;
+
 	items: MenuItem[] | undefined;
 
 	ngOnInit(): void {

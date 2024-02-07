@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
 import { ToolbarModule } from 'primeng/toolbar';
-import { SplitButtonModule } from 'primeng/splitbutton';
+import { SidebarModule } from 'primeng/sidebar';
+import { InputSwitchModule } from 'primeng/inputswitch';
 import { ButtonModule } from 'primeng/button';
 
 @NgModule({
@@ -16,10 +18,13 @@ import { ButtonModule } from 'primeng/button';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ToolbarModule,
-    SplitButtonModule,
+    SidebarModule,
+    InputSwitchModule,
     ButtonModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
