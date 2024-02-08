@@ -9,6 +9,10 @@ import { SalesComponent } from './components/sales/sales.component';
 import { HealthComponent } from './components/health/health.component';
 import { OrdersComponent } from './components/orders/orders.component';
 
+import { BarChartComponent } from './components/charts/bar-chart/bar-chart.component';
+import { LineChartComponent } from './components/charts/line-chart/line-chart.component';
+import { PieChartComponent } from './components/charts/pie-chart/pie-chart.component';
+
 import { NgChartsModule } from 'ng2-charts';
 
 import { ToolbarModule } from 'primeng/toolbar';
@@ -18,7 +22,6 @@ import { ButtonModule } from 'primeng/button';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,10 @@ import { RouterModule } from '@angular/router';
     SidebarComponent,
     SalesComponent,
     HealthComponent,
-    OrdersComponent
+    OrdersComponent,
+    BarChartComponent,
+    LineChartComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
