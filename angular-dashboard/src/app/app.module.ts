@@ -9,8 +9,9 @@ import { SalesComponent } from './components/sales/sales.component';
 import { HealthComponent } from './components/health/health.component';
 import { OrdersComponent } from './components/orders/orders.component';
 
+import { NgChartsModule } from 'ng2-charts';
+
 import { ToolbarModule } from 'primeng/toolbar';
-// import { SidebarModule } from 'primeng/sidebar';
 import { MenuModule } from 'primeng/menu';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ButtonModule } from 'primeng/button';
@@ -33,6 +34,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    NgChartsModule,
     ToolbarModule,
     MenuModule,
     InputSwitchModule,
