@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { MenuItem } from "primeng/api";
 
 @Component({
@@ -6,36 +6,12 @@ import { MenuItem } from "primeng/api";
 	templateUrl: "./header.component.html",
 	styleUrls: ["./header.component.scss"],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   darkMode: boolean = true;
-  sidebarVisible: boolean = true;
 
-	items: MenuItem[] | undefined;
-
-	ngOnInit(): void {
-		this.items = [
-			{
-				label: "Update",
-				icon: "pi pi-refresh",
-			},
-			{
-				label: "Delete",
-				icon: "pi pi-times",
-			},
-			{
-				label: "Angular",
-				icon: "pi pi-external-link",
-				url: "http://angular.io",
-			},
-			{
-				label: "Router",
-				icon: "pi pi-upload",
-				routerLink: "/fileupload",
-			},
-		];
-	}
+  @Output() toggleSidenavEvent = new EventEmitter<void>();
 
   toggleSidenav() {
-    this.sidebarVisible = !this.sidebarVisible;
+    this.toggleSidenavEvent.emit();
   }
 }

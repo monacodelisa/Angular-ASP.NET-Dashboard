@@ -1,6 +1,12 @@
-<app-header></app-header>
+<app-header (toggleSidenavEvent)="toggleSidenav()"></app-header>
 <div class="wrapper">
-  <div class="sidebar-spacer"></div>
+  <div class="sidebar-spacer" [ngClass]="{'open': sidebarVisible, 'closed': !sidebarVisible}">
+    <div class="menu">
+      <a class="menu-item" *ngFor="let item of menuItems" routerLink="{{item.route}}" routerLinkActive="active">
+        {{item.name}}
+      </a>
+    </div>
+  </div>
   <div class="content">
     <router-outlet></router-outlet>
   </div>
