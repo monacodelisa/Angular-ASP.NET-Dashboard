@@ -8,5 +8,21 @@ import { Component, Input } from '@angular/core';
 export class SidebarComponent {
   @Input() sidebarVisible!: boolean;
 
-
+  menuItems = [
+    {
+      name: 'Sales Volume',
+      icon: 'sales',
+      route: 'sales'
+    },
+    {
+      name: 'Latest Orders',
+      icon: 'orders',
+      route: 'orders'
+    },
+    {
+      name: 'System Health',
+      icon: 'shopping_cart',
+      route: 'health'
+    }
+  ]
 }

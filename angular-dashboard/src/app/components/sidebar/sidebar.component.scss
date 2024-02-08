@@ -1,7 +1,7 @@
 .sidebar {
-  background: #292929;
+  background: #272727;
   display: flex;
-  width: 10vw;
+  width: 15vw;
   height: 100vh;
   margin-left: -10rem;
 
@@ -13,5 +13,26 @@
   &.closed {
     transform: translateX(-10rem);
     transition: all 0.3s ease-in-out;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+
+    .menu-item {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1rem;
+
+      &:hover {
+        background-color: #333;
+      }
+
+      &.active {
+        background-color: #2e2e2e;
+      }
+    }
   }
 }

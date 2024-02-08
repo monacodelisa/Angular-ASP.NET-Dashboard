@@ -1,3 +1,7 @@
-<div class="sidebar" [ngClass]="{'open': sidebarVisible, 'closed': !sidebarVisible}" >
-  <p>sidebar works!</p>
+<div class="sidebar" [ngClass]="{'open': sidebarVisible, 'closed': !sidebarVisible}">
+  <div class="menu">
+    <a class="menu-item" *ngFor="let item of menuItems" routerLink="{{item.route}}" routerLinkActive="active">
+      {{item.name}}
+    </a>
+  </div>
 </div>

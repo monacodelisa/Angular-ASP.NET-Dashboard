@@ -6,14 +6,13 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { HealthComponent } from './components/health/health.component';
 
 const routes: Routes = [
-  { path: '/sales', component: SalesComponent },
-  { path: '/orders', component: OrdersComponent },
-  { path: '/health', component: HealthComponent },
-  { path: '/sales', redirectTo: '/', pathMatch: 'full' },
+  { path: 'sales', component: SalesComponent },
+  { path: 'orders', component: OrdersComponent },
+  { path: 'health', component: HealthComponent },
+  { path: 'sales', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule, RouterModule.forRoot(routes)
   ],
