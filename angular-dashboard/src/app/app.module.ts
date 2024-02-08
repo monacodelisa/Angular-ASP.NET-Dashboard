@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { HealthComponent } from './components/health/health.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -16,12 +18,11 @@ import { PieChartComponent } from './components/charts/pie-chart/pie-chart.compo
 import { NgChartsModule } from 'ng2-charts';
 
 import { ToolbarModule } from 'primeng/toolbar';
+import { TableModule } from 'primeng/table';
 import { ChartModule } from 'primeng/chart';
 import { CardModule } from 'primeng/card';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ButtonModule } from 'primeng/button';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     NgChartsModule,
     ToolbarModule,
+    TableModule,
     ChartModule,
     CardModule,
     InputSwitchModule,
