@@ -3,7 +3,8 @@
   background: rgb(33, 33, 33);
   display: flex;
   width: 15vw;
-  min-height: 90vh;
+  min-height: 100vh;
+  overflow: hidden;
   margin-left: -10rem;
 
   &.open {
@@ -17,7 +18,6 @@
   }
 
   .menu {
-
     display: flex;
     flex-direction: column;
     width: 100%;

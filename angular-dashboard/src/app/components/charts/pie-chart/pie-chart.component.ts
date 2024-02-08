@@ -19,15 +19,15 @@ export class PieChartComponent implements OnInit {
 				{
 					data: [330, 330, 330],
 					backgroundColor: [
-						documentStyle.getPropertyValue("--blue-700"),
-						documentStyle.getPropertyValue("--yellow-500"),
-						documentStyle.getPropertyValue("--green-500"),
+						'#22517d',
+						'#ab545d',
+						'#fed257',
 					],
           borderColor: '#333',
 					hoverBackgroundColor: [
-						documentStyle.getPropertyValue("--blue-700"),
-						documentStyle.getPropertyValue("--yellow-500"),
-						documentStyle.getPropertyValue("--green-500"),
+						'#22517d',
+						'#ab545d',
+						'#fed257',
 					],
 				},
 			],

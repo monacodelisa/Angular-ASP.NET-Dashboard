@@ -22,7 +22,7 @@ export class BarChartComponent implements OnInit {
 			datasets: [
 				{
 					label: "My Second dataset",
-					backgroundColor: documentStyle.getPropertyValue("--teal-500"),
+					backgroundColor: '#ab545d',
 					borderColor: documentStyle.getPropertyValue("--teal-500"),
 					data: [28, 48, 40, 19, 86, 27, 90],
 				}
