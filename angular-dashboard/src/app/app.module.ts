@@ -11,12 +11,19 @@ import { SidebarModule } from 'primeng/sidebar';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ButtonModule } from 'primeng/button';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SalesComponent } from './components/sales/sales.component';
+import { HealthComponent } from './components/health/health.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    SalesComponent,
+    HealthComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +34,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     SidebarModule,
     InputSwitchModule,
     ButtonModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
