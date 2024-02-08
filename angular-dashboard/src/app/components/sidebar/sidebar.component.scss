@@ -1,8 +1,9 @@
 .sidebar {
+  position: absolute;
   background: #272727;
   display: flex;
   width: 15vw;
-  height: 100vh;
+  min-height: 90vh;
   margin-left: -10rem;
 
   &.open {
@@ -16,6 +17,7 @@
   }
 
   .menu {
+
     display: flex;
     flex-direction: column;
     width: 100%;

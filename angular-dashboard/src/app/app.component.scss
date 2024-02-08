@@ -1,0 +1,12 @@
+.wrapper{
+  display: flex;
+
+  .sidebar-spacer {
+    width: 15vw;
+    min-height: 60vh;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
