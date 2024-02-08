@@ -12,8 +12,8 @@
               <td>{{order.id}}</td>
               <td>{{order.customer.name}}</td>
               <td>${{order.total}}</td>
-              <td>{{order.placed | date}}</td>
-              <td>{{order.fulfilled | date}}</td>
+              <td>{{order.placed | date: 'short'}}</td>
+              <td>{{order.fulfilled | date: 'short'}}</td>
           </tr>
       </ng-template>
   </p-table>
