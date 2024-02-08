@@ -16,7 +16,8 @@ import { PieChartComponent } from './components/charts/pie-chart/pie-chart.compo
 import { NgChartsModule } from 'ng2-charts';
 
 import { ToolbarModule } from 'primeng/toolbar';
-import { MenuModule } from 'primeng/menu';
+import { ChartModule } from 'primeng/chart';
+import { CardModule } from 'primeng/card';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ButtonModule } from 'primeng/button';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -42,7 +43,8 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     NgChartsModule,
     ToolbarModule,
-    MenuModule,
+    ChartModule,
+    CardModule,
     InputSwitchModule,
     ButtonModule,
   ],

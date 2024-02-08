@@ -1,0 +1,13 @@
+.section-container {
+
+  .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+
+    p-card {
+      width: 32%;
+    }
+  }
+}

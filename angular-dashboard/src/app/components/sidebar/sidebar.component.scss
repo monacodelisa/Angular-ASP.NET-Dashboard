@@ -1,6 +1,6 @@
 .sidebar {
   position: absolute;
-  background: #272727;
+  background: rgb(33, 33, 33);
   display: flex;
   width: 15vw;
   min-height: 90vh;
@@ -29,11 +29,11 @@
       padding: 1rem;
 
       &:hover {
-        background-color: #333;
+        background-color: rgb(36, 36, 36);
       }
 
       &.active {
-        background-color: #2e2e2e;
+        background-color: rgb(38, 38, 38);
       }
     }
   }
