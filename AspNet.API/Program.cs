@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore; 
 using AspNet.API.Models;
+using AspNet.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,24 @@ builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
+
+// Seed data when the application starts
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    try
+    {
+        var dbContext = services.GetRequiredService<ApiContext>();
+        var dataSeed = new DataSeed(dbContext);
+        dataSeed.SeedData(20, 500); 
+    }
+    catch (Exception ex)
+    {
+        // Handle exception if needed
+        Console.WriteLine($"An error occurred while seeding the database: {ex.Message}");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
