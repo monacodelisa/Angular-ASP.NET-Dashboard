@@ -1,8 +1,9 @@
 <p-card >
   <ng-template pTemplate="header">
-    {{ serverInput.name }}
+    <h5>{{ serverInput.name }}</h5>
   </ng-template>
   <p>{{ serverInput.isOnline }}</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis voluptate sapiente obcaecati sed, libero dicta temporibus. Nihil earum natus aliquam, officia obcaecati commodi illo quia, vero explicabo reiciendis optio ipsam.</p>
   <ng-template pTemplate="footer">
       <p-button label="{{buttonText}}" severity="{{severity}}" (click)="toggleStatus(serverInput.isOnline)"></p-button>
   </ng-template>
