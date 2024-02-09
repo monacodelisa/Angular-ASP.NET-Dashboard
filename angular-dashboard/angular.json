@@ -34,9 +34,7 @@
               "primeng/resources/themes/mdc-dark-deeppurple/theme.css",
               "node_modules/primeng/resources/primeng.min.css"
             ],
-            "scripts": [
-              "../node_modules/chart.js/dist/chart.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -101,9 +99,7 @@
               "primeng/resources/themes/mdc-dark-deeppurple/theme.css",
               "node_modules/primeng/resources/primeng.min.css"
             ],
-            "scripts": [
-              "../node_modules/chart.js/dist/chart.js"
-            ]
+            "scripts": []
           }
         }
       }
