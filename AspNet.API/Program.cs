@@ -16,20 +16,28 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-
 var app = builder.Build();
 
+// Check not done yet
+Configure(app);
+
 // Seed data when the application starts
-using (var scope = app.Services.CreateScope())
+void Configure(WebApplication host)
 {
+    using var scope = host.Services.CreateScope();
     var services = scope.ServiceProvider;
 
     try
     {
         var dbContext = services.GetRequiredService<ApiContext>();
+
+        if (dbContext.Database.IsNpgsql()) // Check if it's PostgreSQL
+        {
+            dbContext.Database.Migrate();
+        }
+
         var dataSeed = new DataSeed(dbContext);
-        dataSeed.SeedData(20, 500); 
+        dataSeed.SeedData(10, 20); // Adjust the numbers as needed
     }
     catch (Exception ex)
     {
@@ -37,6 +45,7 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine($"An error occurred while seeding the database: {ex.Message}");
     }
 }
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
