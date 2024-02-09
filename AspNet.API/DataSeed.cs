@@ -41,6 +41,16 @@ namespace AspNet.API
             }
         }
 
+        private void SeedOrders (int n) 
+        {
+            List<Order> orders = BuildOrderList(n);
+
+            foreach (Order order in orders)
+            {
+                _ctx.Orders.Add(order);
+            }
+        }
+
         private List<Customer> BuildCustomerList(int nCustomers)
         {
             var customers = new List<Customer>();
@@ -53,10 +63,34 @@ namespace AspNet.API
 
                 customers.Add(new Customer
                 {
-                    Id = i.ToString(),
+                    Id = i,
                     Name = name,
                     Email = Helpers.MakeCustomerEmail(name),
                     State = Helpers.GetRandomState()
+                });
+            }
+
+            return customers;
+        }
+
+        private List<Order> BuildOrderList(int nOrders)
+        {
+            var orders = new List<Order>();
+            var rand = new Random();
+
+            for (var i = 1; i <= nOrders; i++)
+            {
+                var randomCustomerId = rand.Next(_ctx.Customers.Count());
+                var placed = Helpers.GetRandomOrderPlaced();
+                var completed = Helpers.GetRandomOrderCompleted(placed);
+
+                orders.Add(new Order
+                {
+                    Id = i,
+                    Customer = _ctx.Customers.First(c => c.Id == randomCustomerId),
+                    Total = Helpers.GetRandomOrderTotal(),
+                    Placed = placed,
+                    Completed = completed
                 });
             }
 
