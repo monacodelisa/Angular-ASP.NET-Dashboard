@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "cJaueGR112OlOHRpg1BsMj981YEyvMK/6IJ3QaK2ZK17ZkzwRz2s/cF8VvESjsnMNnutUmdIqjWmYdcQ+CxkQQ==",
+  "success": true,
+  "projectFilePath": "D:\\Estee\\Programming\\My-Projects\\Angular-ASP.NET-Dashboard\\asp-net-api\\asp-net-api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\estee\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
+    "C:\\Users\\estee\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\estee\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\estee\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\estee\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\estee\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\estee\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
