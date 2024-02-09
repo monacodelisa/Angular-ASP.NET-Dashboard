@@ -94,7 +94,7 @@ namespace AspNet.API
                 });
             }
 
-            return customers;
+            return orders;
         }
     }
 }
