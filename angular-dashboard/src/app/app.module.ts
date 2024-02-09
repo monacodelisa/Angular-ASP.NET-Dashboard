@@ -25,6 +25,7 @@ import { ChartModule } from 'primeng/chart';
 import { CardModule } from 'primeng/card';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ButtonModule } from 'primeng/button';
+import { ServerComponent } from './components/server/server.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ButtonModule } from 'primeng/button';
     OrdersComponent,
     BarChartComponent,
     LineChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule,

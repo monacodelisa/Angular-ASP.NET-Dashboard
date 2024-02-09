@@ -1,0 +1,10 @@
+<p-card>
+  <ng-template pTemplate="header">
+    {{ serverInput.name }}
+  </ng-template>
+  <p>{{ serverInput.isOnline }}</p>
+  <ng-template pTemplate="footer">
+      <p-button label="Toggle Status" icon="pi pi-check"></p-button>
+      <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+  </ng-template>
+</p-card>
