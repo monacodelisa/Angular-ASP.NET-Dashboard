@@ -44,18 +44,23 @@ namespace AspNet.API
         private List<Customer> BuildCustomerList(int nCustomers)
         {
             var customers = new List<Customer>();
+            var names = new List<string>();
 
             for (var i = 1; i <= nCustomers; i++)
             {
+                var name = Helpers.MakeUniqueCustomerName(names);
+                names.Add(name);
+
                 customers.Add(new Customer
                 {
-                    Id = i,
+                    Id = i.ToString(),
                     Name = name,
-                    Email = email,
-                    State = state
+                    Email = Helpers.MakeCustomerEmail(name),
+                    State = Helpers.GetRandomState()
                 });
             }
 
+            return customers;
         }
     }
 }
