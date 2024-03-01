@@ -1,0 +1,20 @@
+@import "primeng/resources/themes/mdc-dark-deeppurple/theme.css";
+
+.wrapper {
+  .sidebar-spacer {
+    background: #252525;
+
+    .menu {
+      .menu-item {
+        &:hover {
+          background-color: #303030;
+        }
+
+        &.active {
+          background-color: #2d2d2d;
+        }
+      }
+    }
+  }
+}
+

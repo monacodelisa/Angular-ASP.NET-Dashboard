@@ -1,0 +1,28 @@
+@import 'primeng/resources/themes/mdc-light-deeppurple/theme.css';
+
+.p-toolbar {
+  background: #e9e9e9;
+}
+
+.p-card {
+  background: #f8f8f8;
+}
+
+.wrapper {
+  .sidebar-spacer {
+    background: #f8f8f8;
+
+    .menu {
+      .menu-item {
+        &:hover {
+          background-color: #ececec;
+        }
+
+        &.active {
+          background-color: #e9e9e9;
+        }
+      }
+    }
+  }
+}
+
