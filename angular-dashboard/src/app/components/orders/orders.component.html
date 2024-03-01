@@ -1,5 +1,14 @@
 <div class="card">
-  <p-table [columns]="cols" [value]="orders" [tableStyle]="{ 'min-width': '50rem' }">
+  <p-table
+  [value]="orders"
+  [columns]="cols"
+  [paginator]="true"
+  [rows]="10"
+  [showCurrentPageReport]="true"
+  [tableStyle]="{ 'min-width': '50rem' }"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  [rowsPerPageOptions]="[10, 20]"
+  >
       <ng-template pTemplate="header" let-columns>
           <tr>
               <th *ngFor="let col of columns">

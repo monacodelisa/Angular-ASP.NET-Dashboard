@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+
+.server {
+  .p-card {
+    width: 24vw;
+    padding: 0.5rem;
+    .p-card-content {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}
