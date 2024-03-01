@@ -4,7 +4,7 @@
       <p-button (click)="toggleSidenav()" icon="pi pi-bars"></p-button>
     </div>
     <div class="p-toolbar-group-end">
-      <p-inputSwitch [(ngModel)]="darkMode"></p-inputSwitch>
+      <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')"></p-inputSwitch>
     </div>
   </p-toolbar>
 </div>

@@ -38,7 +38,7 @@ import { ServerComponent } from './components/server/server.component';
     BarChartComponent,
     LineChartComponent,
     PieChartComponent,
-    ServerComponent
+    ServerComponent,
   ],
   imports: [
     BrowserModule,

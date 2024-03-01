@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from "@angular/core";
-import { MenuItem } from "primeng/api";
+import { Component, EventEmitter, Output, inject } from "@angular/core";
+import { ThemeService } from "src/app/services/theme.service";
 
 @Component({
 	selector: "app-header",
@@ -7,11 +7,19 @@ import { MenuItem } from "primeng/api";
 	styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
-  darkMode: boolean = true;
+  checked: boolean = true;
+  selectedTheme: string = "dark";
+  themeService: ThemeService= inject(ThemeService);
 
   @Output() toggleSidenavEvent = new EventEmitter<void>();
+
+  onThemeChange(theme: string): void {
+		this.selectedTheme = theme;
+		this.themeService.setTheme(theme);
+	}
 
   toggleSidenav() {
     this.toggleSidenavEvent.emit();
   }
+
 }
