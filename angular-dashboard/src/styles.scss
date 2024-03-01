@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
 
+.p-hidden-accessible {
+  display: none;
+}
+
 .server {
   .p-card {
     width: 24vw;

@@ -1,10 +1,12 @@
 <app-header (toggleSidenavEvent)="toggleSidenav()"></app-header>
 <div class="wrapper">
-  <div class="sidebar-spacer" [ngClass]="{'open': sidebarVisible, 'closed': !sidebarVisible}">
+  <div class="sidebar-spacer" [class]="{'open': sidebarVisible, 'closed': !sidebarVisible}">
     <div class="menu">
-      <a class="menu-item" *ngFor="let item of menuItems" routerLink="{{item.route}}" routerLinkActive="active">
-        {{item.name}}
-      </a>
+      @for (item of menuItems; track item) {
+        <a class="menu-item" routerLink="{{item.route}}" routerLinkActive="active">
+          {{item.name}}
+        </a>
+      }
     </div>
   </div>
   <div class="content">

@@ -2,6 +2,10 @@ import { Component, OnInit, inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Order } from "src/app/models/order";
 
+import { TableModule } from 'primeng/table';
+import { DatePipe } from "@angular/common";
+
+
 interface Column {
 	field: string;
 	header: string;
@@ -9,6 +13,8 @@ interface Column {
 
 @Component({
 	selector: "app-orders",
+  standalone: true,
+  imports: [TableModule, DatePipe],
 	templateUrl: "./orders.component.html",
 	styleUrls: ["./orders.component.scss"],
 })
@@ -18,7 +24,7 @@ export class OrdersComponent implements OnInit {
 	http: HttpClient = inject(HttpClient);
 
 	ngOnInit(): void {
-		this.http.get<Order[]>("../../assets/orders.json").subscribe((data) => {
+		this.http.get<Order[]>("../../assets/orders.json").subscribe((data: Order[]) => {
 			this.orders = data;
 		});
 

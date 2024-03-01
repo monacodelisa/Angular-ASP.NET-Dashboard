@@ -1,8 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Server } from 'src/app/models/server';
 
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+
 @Component({
   selector: 'app-server',
+  standalone: true,
+  imports: [CardModule, ButtonModule],
   templateUrl: './server.component.html',
   styleUrls: ['./server.component.scss']
 })

@@ -1,8 +1,10 @@
 <div class="section-container">
   <h2>System Health</h2>
   <div class="cards-wrapper">
-    <div class="server" *ngFor="let server of servers">
-      <app-server [serverInput]="server"></app-server>
-    </div>
+    @for (server of servers; track server) {
+      <div class="server">
+        <app-server [serverInput]="server"></app-server>
+      </div>
+    }
   </div>
 </div>

@@ -1,7 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { ChartModule } from "primeng/chart";
 
 @Component({
 	selector: "app-pie-chart",
+  standalone: true,
+  imports: [ChartModule],
 	templateUrl: "./pie-chart.component.html",
 	styleUrls: ["./pie-chart.component.scss"],
 })

@@ -1,29 +1,24 @@
 <div class="card">
-  <p-table
-  [value]="orders"
-  [columns]="cols"
-  [paginator]="true"
-  [rows]="10"
-  [showCurrentPageReport]="true"
-  [tableStyle]="{ 'min-width': '50rem' }"
-  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-  [rowsPerPageOptions]="[10, 20]"
-  >
-      <ng-template pTemplate="header" let-columns>
-          <tr>
-              <th *ngFor="let col of columns">
-                  {{ col.header }}
-              </th>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-order>
-          <tr>
-              <td>{{order.id}}</td>
-              <td>{{order.customer.name}}</td>
-              <td>${{order.total}}</td>
-              <td>{{order.placed | date: 'short'}}</td>
-              <td>{{order.fulfilled | date: 'short'}}</td>
-          </tr>
-      </ng-template>
+  <p-table [value]="orders" [columns]="cols" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10, 20]">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        @for (col of columns; track col) {
+        <th>
+          {{ col.header }}
+        </th>
+        }
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-order>
+      <tr>
+        <td>{{order.id}}</td>
+        <td>{{order.customer.name}}</td>
+        <td>${{order.total}}</td>
+        <td>{{order.placed | date: 'short'}}</td>
+        <td>{{order.fulfilled | date: 'short'}}</td>
+      </tr>
+    </ng-template>
   </p-table>
 </div>

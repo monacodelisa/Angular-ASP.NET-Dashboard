@@ -1,6 +1,5 @@
 .sidebar {
   position: absolute;
-  background: rgb(33, 33, 33);
   display: flex;
   width: 15vw;
   min-height: 100vh;
@@ -27,14 +26,6 @@
       text-decoration: none;
       text-transform: uppercase;
       padding: 1rem;
-
-      &:hover {
-        background-color: rgb(36, 36, 36);
-      }
-
-      &.active {
-        background-color: rgb(38, 38, 38);
-      }
     }
   }
 }

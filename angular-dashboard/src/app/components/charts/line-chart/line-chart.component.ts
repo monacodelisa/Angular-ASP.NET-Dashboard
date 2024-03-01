@@ -1,7 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { ChartModule } from "primeng/chart";
 
 @Component({
 	selector: "app-line-chart",
+  standalone: true,
+  imports: [ChartModule],
 	templateUrl: "./line-chart.component.html",
 	styleUrls: ["./line-chart.component.scss"],
 })

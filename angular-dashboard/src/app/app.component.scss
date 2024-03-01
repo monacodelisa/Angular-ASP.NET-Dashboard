@@ -1,9 +1,8 @@
-.wrapper{
+.wrapper {
   display: flex;
   min-height: 90vh;
 
   .sidebar-spacer {
-    background: rgb(33, 33, 33);
     display: flex;
     width: 15rem;
 
@@ -28,14 +27,6 @@
         text-decoration: none;
         text-transform: uppercase;
         padding: 1rem;
-
-        &:hover {
-          background-color: rgb(36, 36, 36);
-        }
-
-        &.active {
-          background-color: rgb(38, 38, 38);
-        }
       }
     }
   }
